@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+{{#if emails.length}}
+		<table class="table table-hover">
+			<tbody>
+				{{#each emails}}
+					<tr can-click="{toggle}" class="{{#isSelected}}selected{{/isSelected}}">
+						{{#if important}}
+							<td class="col-xs-1">
+								<span class="label label-info">important</span>
+							</td>
+						{{/if}}
+						{{^if important}}
+							<td class="col-xs-1"><span>&nbsp;</span></td>
+						{{/if}}
+						<td can-click='{openEmail id}' class="col-xs-10">
+							<span>
+								{{format subject}}</span> - 
+								<span>
+									<a href="javascript://">{{format message}}</a>
+								</span> 
+						</td>
+
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+{{else}}
+	The {{folder}} is empty
+{{/if}}
+</div>

@@ -1,0 +1,7 @@
+/*components/emails/emails.less!$less*/
+ui-emails {
+  display: block;
+}
+ui-emails .selected {
+  background: #D9EDF7;
+}

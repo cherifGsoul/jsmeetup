@@ -1,0 +1,30 @@
+{
+  "name": "jsmeetup",
+  "version": "1.0.0",
+  "description": "Algiers meetup js examples",
+  "main": "app",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "canjs",
+    "algiers",
+    "ui",
+    "mvvm",
+    "presentation",
+    "example"
+  ],
+  "author": "Cherif BOUCHELAGHEM",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "steal": "^0.11.1",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.11.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "can": "^2.3.0-pre.13",
+    "jquery-ui": "^1.10.5"
+  }
+}

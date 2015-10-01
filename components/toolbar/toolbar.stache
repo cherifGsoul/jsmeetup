@@ -1,0 +1,18 @@
+<div class="btn-group">
+	<button class="btn btn-default move-action mail-action" {{^selected.length}}disabled{{/selected.length}} id="trash">
+		<i class="glyphicon glyphicon-trash"></i>
+		Delete
+	</button>
+	<button class="btn btn-default {{^selected.length}}disabled{{/selected.length}} mail-action" id="move">
+		<i class="glyphicon glyphicon-move"></i>
+		Move
+	</button>
+	<button class="btn btn-default mail-action" {{#enableForOne selected.length}}disabled="disabled"{{/enableForOne}}>
+		<i class="glyphicon glyphicon-arrow-right"></i>
+		Forward
+	</button>
+	<button class="btn btn-default mail-action" {{#enableForOne selected.length}}disabled="disabled"{{/enableForOne}}>
+		<i class="glyphicon glyphicon-pencil"></i>
+		Reply
+	</button>
+</div>

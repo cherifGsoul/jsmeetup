@@ -1,0 +1,13 @@
+{{#email}}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		{{#if important}}
+			<span class="label label-info important-label">Important</span>
+		{{/if}}
+		<h3 class="panel-title">{{ subject }}</h3>
+	</div>
+	<div class="panel-body">
+		{{message}}
+	</div>
+</div>
+{{/email}}

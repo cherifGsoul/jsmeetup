@@ -1,0 +1,7 @@
+<ul class="nav nav-pills nav-stacked">
+			{{#each folders}}
+				<li class="{{#eq folder id}}active{{/eq}}">
+					<a can-href='{folder=id}'>{{name}}</a>
+				</li>
+			{{/each}}
+			</ul>
