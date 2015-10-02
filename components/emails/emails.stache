@@ -3,7 +3,7 @@
 				<table class="table table-hover">
 					<tbody>
 						{{#each emails}}
-							<tr>
+							<tr class="{{#if unread}}unread{{/if}}">
 								
 									
 									<td class="col-xs-10">

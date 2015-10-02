@@ -11,7 +11,7 @@
 				{{#if important}}
 					<span class="label label-info important-label">Important</span>
 				{{/if}}
-				<h3 class="panel-title">{{ subject }}</h3>
+				<span><h3 class="panel-title">{{ subject }}</h3></span>
 			</div>
 			<div class="panel-body">
 				{{message}}
