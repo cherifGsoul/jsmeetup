@@ -1,8 +1,5 @@
 import fixture from 'can/util/fixture/';
-
-fixture({
-    "GET /api/emails": function(request) {
-        return [{
+var emails =  [{
             "id": "mail_2139",
             "contact_id": "contact_342",
             "folders": ["inbox"],
@@ -71,6 +68,23 @@ fixture({
             "subject": "Fusce tristique pretium :(",
             "message": "aliquam quis arcu."
         }];
+
+fixture({
+    "GET /api/emails": function(request) {
+        return emails
+    },
+    "GET /api/emails/{id}": function(request) {
+        var id = request.data.id,
+        item;
+
+        can.each(emails,function(email){
+            
+            if (email.id === id) {
+                item = email;
+            }
+        });
+
+        return item;
     },
     "DELETE /api/emails/{id}": function() {
         return {}

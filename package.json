@@ -17,6 +17,7 @@
   "author": "Cherif BOUCHELAGHEM",
   "license": "MIT",
   "devDependencies": {
+    "faker": "^3.0.1",
     "grunt": "^0.4.5",
     "steal": "^0.11.1",
     "steal-qunit": "^0.1.1",
@@ -25,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "can": "^2.3.0-pre.13",
-    "jquery-ui": "^1.10.5"
+    "jquery-ui": "^1.10.5",
+    "lodash": "^3.10.1"
   }
 }

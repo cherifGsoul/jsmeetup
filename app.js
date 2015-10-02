@@ -5,8 +5,6 @@ import "fixtures/folders";
 import "fixtures/contacts";
 import "fixtures/emails";
 
-import 'can/route/pushstate/';
-
 import "./app.less!";
 
 import template from "./app.stache!";
@@ -14,7 +12,7 @@ import template from "./app.stache!";
 import Folder from "models/folder";
 import Email from "models/email";
 
-can.fixture.delay = 1000;
+//can.fixture.delay = 1000;
 
 const AppState = can.Map.extend({
 	define: {
@@ -30,9 +28,6 @@ const AppState = can.Map.extend({
 		},
 		emails:{
 			value: new Email.List({}),
-			get(list){
-				return list.filterByFolder(this.attr('folder'));
-			},
 			serialize:false
 		},
 		email:{
@@ -55,7 +50,20 @@ const AppState = can.Map.extend({
 		selected:{
 			value : [],
 			serialize:false
-		}
+		},
+		composeMessageOpen: {
+			value:false,
+			set(val){
+				return val === 'true' || val === true;
+			},
+			serialize:false
+		},
+	},
+	openComposeMessage(){
+		this.attr('composeMessageOpen',true);
+	},
+	closeComposeMessage(){
+		this.attr('composeMessageOpen',false);
 	}
 });
 
@@ -64,8 +72,8 @@ let appState = new AppState();
 
 can.route.map(appState);
 
-can.route(':folder',{folder:'inbox'});
-can.route(':folder/:emailId',{emailId:null});
+can.route(':folder',{folder:'inbox',writeNewEmail:false});
+can.route(':folder/:emailId',{emailId:false,writeNewEmail:false});
 
 can.route.ready();
 
@@ -75,6 +83,6 @@ can.route.ready();
 $('body').on('click', 'a[href="javascript://"]', ev => ev.preventDefault());
 
 
-$('#main-app').html( template(appState));
+$('#main-app').html( template(appState) );
 
 export default AppState;

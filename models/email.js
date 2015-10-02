@@ -1,10 +1,7 @@
 import can from "can";
 
 let Email = can.Model.extend({
-        findAll: 'GET /api/emails',
-        destroy: 'DELETE /api/emails/{id}',
-        findOne: 'GET /api/emails/{id}'
-
+        resource: '/api/emails',
     }, {});
    
     Email.List = Email.List.extend({

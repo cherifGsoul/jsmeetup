@@ -1,3 +1,6 @@
+<button class="btn btn-info btn-block btn-compose" can-click="{openComposeMessage}">
+	New message
+</button>
 <ul class="nav nav-pills nav-stacked">
 			{{#each folders}}
 				<li class="{{#eq folder id}}active{{/eq}}">
