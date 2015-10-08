@@ -20,9 +20,9 @@
 					
 				</div>
 				<div class="col-xs-6">
-					{{#if email}}
+					{{#if emailId}}
 						<can-import from="components/email/" />
-						<ui-email email="{email}"></ui-email>	
+						<ui-email email-id="{emailId}" emails="{emails}"></ui-email>	
 					{{else}}
 						select an email to view it's content
 					{{/if}}

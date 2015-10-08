@@ -1,3 +1,5 @@
+{{isPending}}
+
 {{#if email.isPending}}
 	<div class="alert alert-info">Loading email...</div>
 {{ else }}

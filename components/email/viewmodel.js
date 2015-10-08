@@ -3,6 +3,10 @@ import "can/map/define/";
 import Email from "models/email";
 
 export default can.Map.extend({
+	init:function()
+	{
+		console.log(this);
+	},
 	define:{
 		email:{
 			get(){

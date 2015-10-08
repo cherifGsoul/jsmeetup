@@ -30,23 +30,6 @@ const AppState = can.Map.extend({
 			value: new Email.List({}),
 			serialize:false
 		},
-		email:{
-			get(){
-				let id = this.attr('emailId'),
-				emails = this.attr('emails');
-
-				let email = emails.filter(function(email){
-					return email.attr('id') == id;
-				});
-				
-				email = email[0];
-
-				if(email) {
-					this.attr('selected').push(email);
-				}
-				return email;
-			}
-		},
 		selected:{
 			value : [],
 			serialize:false
