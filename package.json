@@ -28,5 +28,10 @@
     "can": "^2.3.0-pre.13",
     "jquery-ui": "^1.10.5",
     "lodash": "^3.10.1"
+  },
+  "system": {
+    "map": {
+      "faker":"faker/build/build/faker"
+    }
   }
 }

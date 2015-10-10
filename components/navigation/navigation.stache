@@ -2,9 +2,13 @@
 	New message
 </button>
 <ul class="nav nav-pills nav-stacked">
-			{{#each folders}}
-				<li class="{{#eq folder id}}active{{/eq}}">
-					<a can-href='{folder=id}'><i class="glyphicon {{icon id}}"></i> {{name}}</a>
-				</li>
-			{{/each}}
-			</ul>
+	{{#each folders}}
+		<li class="{{#eq folder id}}active{{/eq}}">
+			<a can-href='{folder=id}'><i class="glyphicon {{icon id}}"></i> {{name}} 
+				<span class="badge">
+					{{countByFolder}}
+				</span>
+			</a>
+		</li>
+	{{/each}}
+</ul>

@@ -1,5 +1,5 @@
 import can from "can";
-import "can/list/promise/";
+//import "can/list/promise/";
 import ViewModel from "./viewmodel";
 
 import template from "./emails.stache!";

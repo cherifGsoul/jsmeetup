@@ -47,7 +47,10 @@ const AppState = can.Map.extend({
 	},
 	closeComposeMessage(){
 		this.attr('composeMessageOpen',false);
-	}
+	},
+	/*countByFolder:function(folder) {
+		return this.attr('emails').filterByFolder(folder).length;
+	}*/
 });
 
 

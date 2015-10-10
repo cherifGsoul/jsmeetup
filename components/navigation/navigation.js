@@ -29,6 +29,13 @@ can.Component.extend({
 				return "glyphicon-trash";
 			}
 
+		},
+		countByFolder:function(options) {
+			let emails = this.attr('emails');
+			let folder = options.context.attr('id');
+
+			return emails.filterByFolder(folder).length;
+
 		}
 	}
 });

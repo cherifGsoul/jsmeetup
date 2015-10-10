@@ -1,5 +1,3 @@
-{{isPending}}
-
 {{#if email.isPending}}
 	<div class="alert alert-info">Loading email...</div>
 {{ else }}
@@ -13,10 +11,10 @@
 				{{#if important}}
 					<span class="label label-info important-label">Important</span>
 				{{/if}}
-				<span><h3 class="panel-title">{{ subject }}</h3></span>
+				<span><h3 class="panel-title">{{ email.subject }}</h3></span>
 			</div>
 			<div class="panel-body">
-				{{message}}
+				{{email.message}}
 			</div>
 		</div>
 		{{/email}}

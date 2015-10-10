@@ -5,16 +5,16 @@ import faker from "faker";
 
 faker.locale = "en_US";
 
-let emailStore = fixture.store(120,function(i){
+let emailStore = fixture.store(20,function(i){
     return {
         id: i,
         contact_id: faker.random.uuid(),
-        folders: faker.helpers.randomize(["inbox","sent","later","trash"]),
+        folders: ["inbox"],
         time: faker.date.past(),
-        important: faker.random.boolean(),
         subject: faker.lorem.sentence(),
         message: faker.lorem.paragraphs()
     }
+
 });
 
 fixture({

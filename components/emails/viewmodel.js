@@ -4,7 +4,7 @@ import Email from "models/email";
 
 export default can.Map.extend({
 	define:{
-		emails:{
+		emailList:{
 			get(list){
 				return list.filterByFolder(this.attr('folder'));
 			}

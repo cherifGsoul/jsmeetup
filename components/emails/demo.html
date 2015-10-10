@@ -4,7 +4,7 @@
 		<can-import from="fixtures/emails" />
 		<can-import from="components/emails/" />
 
-		<ui-emails emails="{emails}" folder="{folder}"></ui-list>
+		<ui-emails email-list="{emails}" folder="{folder}"></ui-list>
 
 	</script>
 </div>
@@ -15,8 +15,7 @@
 	import "fixtures/emails";
 	import Email from "models/email";
 
-	var list = new Email.List({})
-	
+	var list = new Email.List({});
 
 	var vm = $('#demo').viewModel();
 

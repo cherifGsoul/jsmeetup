@@ -1,6 +1,6 @@
 import fixture from 'can/util/fixture/';
 
-can.fixture({
+fixture({
     "GET /api/contacts": function() {
         return [{
             "id": "contact_342",
