@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Responsive compute</title>
+
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		
+	</head>
+	<body>
+		<div class="container">
+
+	<main></main>
+	<script type='text/stache' id="demo">
+		<div class="row">
+			{{#if mobile}}
+	  			<div class="col-sm-12"><h1>Hi there phone! Mobile navigation goes here.</h1></div>
+			{{else}}
+				<div class="col-sm-12"><h1>Totally different desktop experience!</h1></div>
+			{{/if}}
+		</div>
+	</script>
+</div>
+
+<script src="../../node_modules/steal/steal.js" main="@empty">
+	import $ from "jquery";
+	import can from "can";
+	import "can/view/import/";
+	
+	var mql = matchMedia('only screen and (max-width: 768px)');
+	mql.matches === true; // true if the screen is <= 768px
+
+
+	var mobile = can.compute(mql.matches, {
+	  get: function(){
+	    return mql.matches;
+	  },
+	  on: function(updated){
+	    mql.addListener(updated);
+	  },
+	  off: function(updated){
+	    mql.removeListener(updated);
+	  }
+	});
+
+	$('main').html(can.view('#demo',{
+			mobile:mobile
+		})
+	);
+
+	
+
+</script>
+		
+	</body>
+</html>
+

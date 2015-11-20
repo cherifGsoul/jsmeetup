@@ -1,0 +1,25 @@
+
+ui-emails {
+	display: block;
+	overflow-y: hidden;
+	height: 80vh;
+	.email-panel {
+		overflow: auto;
+		height: 100%;
+	}
+	a {
+		display: block;
+		&,
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: #555;
+		}
+	}
+	.unread {
+		font-weight: 700;
+	}
+	.selected {
+		background: #D9EDF7;
+	}
+}

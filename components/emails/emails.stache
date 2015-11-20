@@ -1,0 +1,33 @@
+{{#if emailList.length}}
+		<div class="panel panel-default email-panel">
+				<table class="table table-hover">
+					<tbody>
+						{{#each emailList}}
+							<tr class="{{#if unread}}unread{{/if}}">
+								
+									
+									<td class="col-xs-10">
+										<a can-href="{folder=folder emailId=id}">
+										{{#if important}}
+										
+												<span class="label label-info">important</span>
+										
+										{{/if}}
+										{{^if important}}
+											<span>&nbsp;</span>
+										{{/if}}
+											<span>
+												{{format subject}}</span> - 
+											<span>
+												{{format message}}
+											</span> 
+										</a>
+									</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+		</div>
+	{{else}}
+		The list is empty
+{{/if}}

@@ -1,0 +1,22 @@
+{{#if email.isPending}}
+	<div class="alert alert-info">Loading email...</div>
+{{ else }}
+
+	{{#if email.error}}
+		<div class="alert alert-danger">{{ email.error }}</div>
+	{{ else }}
+		{{#email}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				{{#if important}}
+					<span class="label label-info important-label">Important</span>
+				{{/if}}
+				<span><h3 class="panel-title">{{ email.subject }}</h3></span>
+			</div>
+			<div class="panel-body">
+				{{email.message}}
+			</div>
+		</div>
+		{{/email}}
+	{{/if}}
+{{/if}}
