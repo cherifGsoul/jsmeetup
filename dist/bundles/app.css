@@ -1,8 +1,12 @@
 /*app.less!$less*/
-body{margin-top:18px}ui-toolbar{margin-bottom:15px}
+ui-toolbar{margin-bottom:15px}
+/*components/navigation/navigation.less!$less*/
+ui-navigation{display:block}ui-navigation .btn-compose{margin-bottom:15px}
 /*components/toolbar/toolbar.less!$less*/
 ui-toolbar{display:block}
 /*components/emails/emails.less!$less*/
-ui-emails{display:block}ui-emails .selected{background:#D9EDF7}
+ui-emails,ui-emails a{display:block}ui-emails{overflow-y:hidden;height:80vh}ui-emails .email-panel{overflow:auto;height:100%}ui-emails a,ui-emails a:focus,ui-emails a:hover{text-decoration:none;color:#555}ui-emails .unread{font-weight:700}ui-emails .selected{background:#D9EDF7}
 /*components/email/email.less!$less*/
 ui-email{display:block}
+/*components/compose/compose.less!$less*/
+ui-compose{display:block;width:600px;position:fixed;bottom:0;right:5px}
